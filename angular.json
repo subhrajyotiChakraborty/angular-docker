@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "container-app"
+    }
+  },
+  "defaultProject": "container-app",
+  "cli": {
+    "analytics": false
+  }
 }

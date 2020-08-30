@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: angular-app-deployment
+  labels:
+    app: angular-nginx
+    type: front-end
+spec:
+  template:
+    metadata:
+      name: angular-app-pod
+      labels:
+        app: angular-nginx
+        type: front-end
+    spec:
+      containers:
+        - name: simple-ng-app
+          image: subhaationic3/simple-angular-app:latest
+  replicas: 2
+  selector:
+    matchLabels:
+      app: angular-nginx
+      type: front-end
